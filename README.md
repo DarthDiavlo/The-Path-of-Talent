@@ -68,6 +68,8 @@ peer chaincode query -C mychannel -n token_erc721 -c '{"function":"OwnerOf","Arg
 ```bash
 ./network.sh down
 ```
+Какие-то ещё тонкости реализации работы с ERC-721 описаны здесь
+https://github.com/hyperledger/fabric-samples/tree/main/token-erc-721
 
 
 
