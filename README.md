@@ -77,7 +77,7 @@ cd ~/The-Path-of-Talent/network
 
 Деплой смарт‑контракта ERC‑721:
 ```bash
-./network.sh deployCC -ccn token_erc721 -ccp ../erc-721/chaincode/ -ccl go
+./network.sh deployCC -ccn token_erc721 -ccp ../erc-721/chaincode-go/ -ccl go
 ```
 
 ---
@@ -113,23 +113,18 @@ sudo apt install maven -y
 
 ## 📁 Подготовка сертификатов для Java‑сервиса
 
-Необходимо скопировать файлы:
+Необходимо скопировать файлы, для идентификации API в сети:
 
 **1. key.pem**
 
-Получить из:
+Вначале переименуем файл(так как каждый раз возвращается новый hash)
 ```
-~/The-Path-of-Talent/network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/keystore/
-```
-
-Скопировать в:
-```
-~/The-Path-of-Talent/nftfabric/src/main/resources/
+mv ~/The-Path-of-Talent/network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/* ~/The-Path-of-Talent/network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem
 ```
 
-Команда:
+Теперь скопируем в целевую папку
 ```bash
-cp ~/The-Path-of-Talent/network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/msp/keystore/key.pem ~/The-Path-of-Talent/nftfabric/src/main/resources/
+cp ~/The-Path-of-Talent/network/organizations/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp/keystore/key.pem ~/The-Path-of-Talent/nftfabric/src/main/resources/
 ```
 
 **2. cert.pem**

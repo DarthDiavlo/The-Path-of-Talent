@@ -34,6 +34,15 @@ public class NFTController {
         return fabricService.getNFT(tokenId);
     }
 
+    @GetMapping("/{tokenId}/image")
+    public ResponseEntity<byte[]> getNFTImage(@PathVariable String tokenId) throws Exception {
+        byte[] imageBytes = fabricService.getNFTImage(tokenId);
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + tokenId + ".png\"")
+                .contentType(MediaType.IMAGE_PNG)
+                .body(imageBytes);
+    }
 
     @GetMapping("/name")
     public String getName() throws Exception {

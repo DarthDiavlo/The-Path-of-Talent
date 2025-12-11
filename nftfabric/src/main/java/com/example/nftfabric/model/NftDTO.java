@@ -1,16 +1,23 @@
 package com.example.nftfabric.model;
 
+
+import java.util.Map;
+
 public class NftDTO {
     private String tokenId;
     private String owner;
-    private String uri;
+    private String tokenUri;
+
+    private Map<String, Object> metadata;
+
 
     public NftDTO() {}
 
-    public NftDTO(String tokenId, String owner, String uri) {
+    public NftDTO(String tokenId, String owner, String tokenUri, Map<String, Object> metadata) {
         this.tokenId = tokenId;
         this.owner = owner;
-        this.uri = uri;
+        this.tokenUri = tokenUri;
+        this.metadata = metadata;
     }
 
     public String getTokenId() {
@@ -29,11 +36,14 @@ public class NftDTO {
         this.owner = owner;
     }
 
-    public String getUri() {
-        return uri;
+    public String getTokenUri() {
+        return tokenUri;
     }
 
-    public void setUri(String uri) {
-        this.uri = uri;
+    public void setTokenUri(String tokenUri) {
+        this.tokenUri = tokenUri;
     }
+
+    public Map<String, Object> getMetadata() { return metadata; }
+    public void setMetadata(Map<String, Object> metadata) { this.metadata = metadata; }
 }
