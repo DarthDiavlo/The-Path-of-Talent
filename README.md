@@ -151,6 +151,8 @@ cp ~/The-Path-of-Talent/network/organizations/peerOrganizations/org1.example.com
 Установка IPFS
 
 ```bash
+tar -xvzf kubo_v0.39.0_linux-amd64.tar.gz
+cd kubo
 sudo bash install.sh
 ipfs --version
 
