@@ -182,7 +182,12 @@ java -jar target/nftfabric-0.0.1-SNAPSHOT.jar --server.port=8081
 
 ---
 
-## 📤 Пример тела запроса
+## 📤 Адреса для запросов
+
+Адрес создания NFT (Post запрос)
+http://<ipv4-машины>:8081/api/nft/mint-ipfs
+
+Пример тела запроса
 
 ⚠️ **Отсутствие любого поля сломает генерацию!**
 
@@ -196,6 +201,14 @@ java -jar target/nftfabric-0.0.1-SNAPSHOT.jar --server.port=8081
   ]
 }
 ```
+
+Get Запросы
+
+Получение метаданных
+http://<ipv4-машины>:8081/api/nft//{tokenId}
+
+Получение изображения
+http://<ipv4-машины>:8081/api/nft//{tokenId}/image
 
 
 
