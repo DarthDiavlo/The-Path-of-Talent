@@ -33,7 +33,7 @@ sudo systemctl start docker
 
 Добавьте своего пользователя в группу Docker:
 ```bash
-sudo usermod -a -G docker <имя пользователя>
+sudo usermod -aG docker $USER
 ```
 
 ### 🟦 Установка Go
