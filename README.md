@@ -36,14 +36,14 @@ sudo systemctl start docker
 sudo usermod -a -G docker <имя пользователя>
 ```
 
----
-
-## 🟦 Установка Go
+### 🟦 Установка Go
 
 Установите последнюю версию Go с официального сайта:  
 https://go.dev/doc/install
 
-Получить установочный скрипт Hyperledger Fabric:
+---
+
+## Получить установочный скрипт Hyperledger Fabric:
 ```bash
 curl -sSLO https://raw.githubusercontent.com/hyperledger/fabric/main/scripts/install-fabric.sh && chmod +x install-fabric.sh
 ```
@@ -136,6 +136,17 @@ cp ~/The-Path-of-Talent/network/organizations/peerOrganizations/org1.example.com
 ```bash
 cp ~/The-Path-of-Talent/network/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt ~/The-Path-of-Talent/nftfabric/src/main/resources/
 ```
+---
+Установка IPFS
+
+```bash
+sudo bash install.sh
+ipfs --version
+
+ipfs init
+ipfs daemon
+```
+
 
 ---
 
